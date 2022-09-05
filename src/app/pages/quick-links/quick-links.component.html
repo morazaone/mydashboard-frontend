@@ -1,0 +1,63 @@
+<!--src/app/pages/external-api/external-api.component.html-->
+
+<div>
+    <h1>Quick Links</h1>
+    <p>
+      You will be able to edit your most recent video link from here.
+    </p>
+   
+     
+    <div class="container">
+    
+            <div class="form-check row" >
+                <input 
+                class="form-check-input" 
+                type="radio" 
+                name="flexRadioDefault" 
+                id="recentVideo" 
+                checked 
+                (click)="this.onChange($event)">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Most Recent Video
+                </label>
+            </div>
+            <div class="form-check row">
+                <input 
+                class="form-check-input"
+                type="radio" 
+                name="flexRadioDefault" 
+                id="customVideo"  
+                (click)="this.onChange($event)">
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Custom video link
+                </label>
+            </div>
+        <div *ngIf="!this.recentVideo">
+            <p>Enter custom video link:</p>
+            <input class="contentFile" name ="contentInput" [(ngModel)]="customLink" placeholder="https://www.youtube.com/watch?v=SomeLink" >
+        </div>
+
+        <div class="row"> <button (click)="getlatestVideo()" type="button" class="btn btn-primary">
+            Update YouTube video link
+          </button>
+        </div>
+    </div>
+   
+    <div *ngIf="message" class="mt-5">
+      <h6 class="muted">Result</h6>
+      <div class="container-fluid">
+        <div>
+          <p>File's URL:</p><a target="_blank" href={{html_url}} >{{ html_url }} </a>
+        </div>
+        <div class="row">
+          <code class="col-12 text-light bg-dark p-4">
+            {{ message }}
+            {{ content }}
+          </code>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+        <img src="./../../../assets/update link.png" class="img-fluid" alt="Responsive image">
+    </div>
+</div>
