@@ -1,3 +1,12 @@
+Frontend - MyDashboard
+
+Related repos:
+https://github.com/morazaone/links-page
+
+https://github.com/morazaone/mydashboard-backend
+
+
+--------------------- ORIGINAL Readme below ---------------------------------
 # Easy User Authentication for Angular Apps
 
 This repository hosts the application that you create by following the ["Complete Guide to Angular User Authentication with Auth0"](https://auth0.com/blog/complete-guide-to-angular-user-authentication/).
